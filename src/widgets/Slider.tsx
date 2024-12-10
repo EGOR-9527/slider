@@ -1,6 +1,7 @@
 import React, { useState, useEffect } from 'react';
 import {PAGES} from '../entities/PAGES';
 import "./slider.css";
+import Loader from '../shared/Loader'; // Импортируйте ваш лоадер
 
 export const Slider: React.FC = () => {
     const [offset, setOffset] = useState(0);
@@ -32,6 +33,20 @@ export const Slider: React.FC = () => {
             setOffset(-(pageWidth * newIndex)); // Обновляем смещение
         }
     };
+
+    const [loading, setLoading] = useState(true);
+
+    useEffect(() => {
+        const timer = setTimeout(() => {
+            setLoading(false);
+        }, 3000); // Замените 3000 на время, необходимое для загрузки данных
+
+        return () => clearTimeout(timer);
+    }, []);
+
+    if (loading) {
+        return <Loader />; // Показать лоадер, пока данные загружаются
+    }
 
     return (
         <div className='main-container'>
