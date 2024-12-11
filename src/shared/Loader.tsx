@@ -5,12 +5,12 @@ import loadingAnimation from '../animation/Loader.json'; // Укажите пу�
 
 const Loader: React.FC = () => {
     return (
-        <div style={{ display: 'flex', justifyContent: 'center', alignItems: 'center', height: '100vh' }}>
+        <div style={{ display: 'flex', justifyContent: 'center', alignItems: 'center', height: '100vh', position: "absolute" }}>
             <Player
                 autoplay
                 loop
                 src={loadingAnimation}
-                style={{ height:"70vw", width: "70vw" }} // Укажите размеры лоадера
+                style={{ height:"100vw", width: "100vw"}} // Укажите размеры лоадера
             />
         </div>
     )

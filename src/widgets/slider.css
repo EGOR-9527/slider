@@ -4,6 +4,12 @@
   box-sizing: border-box;
 }
 
+@font-face {
+  font-family: "Afacad";
+  src: url("./font/Afacad.ttf");
+  font-weight: 400;
+}
+
 * svg {
   pointer-events: none;
 }
@@ -12,7 +18,7 @@ body {
   display: flex;
   justify-content: center;
   align-items: center;
-  background-color: #0C1721;
+  background-color: #0c1721;
 }
 
 .main-container {
@@ -53,13 +59,13 @@ body {
   border: 2px solid #0666e4;
   border-radius: 30px; /* Увеличиваем радиус для мобильных устройств */
   background-color: transparent;
-  margin-inline-start: 10vw;
 }
 
 .container-button {
   position: absolute;
   display: flex;
   align-items: center;
+  justify-content: center;
   bottom: 10vw; /* Позиционируем кнопки внизу */
   width: 100%; /* Занимаем всю ширину */
 }
@@ -87,6 +93,20 @@ body {
   background-color: #d9d9d9; /* Цвет активного индикатора */
 }
 
+.text {
+  position: absolute;
+  color: white;
+  margin-top: 110vw;
+  font-family: "Afacad";
+}
+
+.text > h1 {
+  font-size: 48px;
+}
+
+.text > p {
+  font-size: 37px;
+}
 /* Медиа-запросы для мобильных устройств */
 @media (max-width: 425px) {
   .exit-button {
