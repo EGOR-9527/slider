@@ -8,9 +8,9 @@ const Slide5: React.FC = () => {
         <div className='item' style={{ minWidth: '100vw', height: '100vh', display: 'flex', justifyContent: 'center', alignItems: 'center' }}>
             <img src={slide5} alt="Slide 5" style={{ width: '100%', height: '100%', objectFit: 'cover' }} />
             <div className="text5">
-                <p>Игра против Бота</p>
-                <p>Идентичные правила, как в PvP.</p>
-                <p>200% от ставки победителя</p>
+                <h1>Игра против Бота</h1>
+                <h1>Идентичные правила, как в PvP.</h1>
+                <h1>200% от ставки победителя</h1>
             </div>
         </div>
     );
