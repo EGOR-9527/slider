@@ -223,12 +223,11 @@ body {
   display: flex;
   flex-direction: column;
   justify-content: center;
-  line-height: 24px;
 }
 .text6 > h1 {
   font-family: "Exo2";
   display: flex;
-  margin-top: 3vw;
+  margin-top: 4vw;
   font-size: min(5.34759vw, 2.46305vh);
 }
 
@@ -241,7 +240,6 @@ body {
   display: flex;
   flex-direction: column;
   justify-content: center;
-  line-height: 24px;
 }
 .text7 > h1 {
   font-family: "Exo2";
@@ -259,7 +257,6 @@ body {
   display: flex;
   flex-direction: column;
   justify-content: center;
-  line-height: 24px;
 }
 .text8 > h1 {
   font-family: "Exo2";
@@ -354,6 +351,14 @@ p {
 
   .text > p {
     font-size: min(4vw, 2.5vh); /* Уменьшаем размер текста на планшетах */
+  }
+}
+
+@media (max-width: 2000px) {
+  .enter-button,
+  .exit-button {
+    width: 90vw; /* Увеличиваем ширину кнопок на мобильных устройствах */
+    height: 7vh; /* Уменьшаем высоту кнопок */
   }
 }
 
