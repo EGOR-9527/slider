@@ -74,7 +74,7 @@ export const Slider: React.FC = () => {
                         {currentIndex > 0 && (
                             <button className="exit-button" onClick={handleLeftArrowClick}>Назад</button>
                         )}
-                        {currentIndex < PAGES.length - 1 && (
+                        {currentIndex < PAGES.length && (
                             <button className="enter-button" onClick={handleRightArrowClick}>Далее</button>
                         )}
                     </>

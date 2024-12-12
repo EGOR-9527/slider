@@ -5,7 +5,7 @@ import loadingAnimation from '../animation/Loader.json'; // Укажите пу�
 
 const Loader: React.FC = () => {
     return (
-        <div style={{ display: 'flex', justifyContent: 'center', alignItems: 'center', height: '100vh', position: "absolute" }}>
+        <div style={{ display: 'flex', justifyContent: 'center', alignItems: 'center', height: '100vh', position: "absolute" ,top: "-20%",}}>
             <Player
                 autoplay
                 loop

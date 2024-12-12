@@ -9,7 +9,7 @@ import { Player } from '@lottiefiles/react-lottie-player';
 const Slide3: React.FC = () => {
     return (
         <div className='item' style={{ minWidth: '100vw', height: '100vh', display: 'flex', justifyContent: 'center', alignItems: 'center' }}>
-            <img src={slide3} alt="Slide 3" style={{ width: '100%', height: 'auto', maxHeight: '100%' }} />
+            <img src={slide3} alt="Slide 3" style={{ width: '100%', height: '100%', maxHeight: '100%', objectFit: 'cover' }} />
 
             <Player
                 className='animation-player'
@@ -17,8 +17,14 @@ const Slide3: React.FC = () => {
                 loop={true}
                 controls={true}
                 src={Animait} // Используйте импортированную анимацию
-                style={{ height: '68vw', width: '68vw' , marginTop: "-30vw", marginLeft:"-87vw", position: 'absolute'}}
+                style={{ height: '68vw', width: '68vw', marginTop: "-42.51337vw", marginLeft: "-87vw", position: 'absolute' }}
             />
+
+            <div className="text3">
+                <h1>Удобная платежная система</h1>
+                <h1>с депозитом и выводом </h1>
+                <h1>в ton, m5 и dfc</h1>
+            </div>
         </div>
     );
 };

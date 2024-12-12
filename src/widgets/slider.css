@@ -10,6 +10,12 @@
   font-weight: 400;
 }
 
+@font-face {
+  font-family: "Exo2";
+  src: url("./font/Exo2.ttf");
+  font-weight: 400;
+}
+
 * svg {
   pointer-events: none;
 }
@@ -41,24 +47,26 @@ body {
   transition: transform 300ms ease-in-out; /* Упрощение записи */
 }
 
-.enter-button {
+.enter-button,
+.exit-button {
   color: white;
-  width: 40vw; /* Изменяем ширину для мобильных устройств */
-  height: 10vh; /* Высота кнопки в процентах от высоты вьюпорта */
   border: none;
-  background: #0666e4;
   border-radius: 30px;
-  margin-inline-start: 5vw;
+  margin: 0 2vw; /* Отступы между кнопками */
+  transition: background-color 0.3s; /* Плавный переход цвета */
+}
+
+.enter-button {
+  background: #0666e4;
+  width: 40vw; /* Ширина кнопки */
+  height: 10vh; /* Высота кнопки */
 }
 
 .exit-button {
-  color: white;
-  width: 10vw; /* Изменяем ширину для мобильных устройств */
-  height: 10vh; /* Высота кнопки в процентах от высоты вьюпорта */
-  border: none;
-  border: 2px solid #0666e4;
-  border-radius: 30px; /* Увеличиваем радиус для мобильных устройств */
   background-color: transparent;
+  border: 2px solid #0666e4;
+  width: 10vw; /* Ширина кнопки */
+  height: 10vh; /* Высота кнопки */
 }
 
 .container-button {
@@ -74,7 +82,7 @@ body {
 .indicators {
   position: absolute;
   z-index: 5;
-  top: 5vw; /* Расположение индикаторов сверху */
+  top: 13.5vw; /* Расположение индикаторов сверху */
   display: flex;
   justify-content: center;
   width: 100%;
@@ -96,17 +104,176 @@ body {
 .text {
   position: absolute;
   color: white;
-  margin-top: 110vw;
   font-family: "Afacad";
+  display: flex;
+  flex-direction: column; /* Вертикальное выравнивание текста */
+  align-items: center; /* Центрирование по горизонтали */
+  justify-content: center; /* Центрирование по вертикали */
+  top: 50%; /* Центрирование по вертикали */
+  transform: translateY(-50%); /* Центрирование по вертикали */
+  width: 100%; /* Занимаем всю ширину */
+  text-align: center; /* Центрирование текста */
 }
 
 .text > h1 {
-  font-size: 48px;
+  font-size: min(10vw, 5vh); /* Адаптивный размер заголовка */
+  margin: 0; /* Убираем отступы */
 }
 
 .text > p {
-  font-size: 37px;
+  font-size: min(5vw, 3vh); /* Адаптивный размер текста */
+  margin: 0; /* Убираем отступы */
 }
+
+.text2 {
+  position: absolute;
+  color: white;
+  font-family: "Afacad";
+  display: flex;
+  flex-direction: column; /* Вертикальное выравнивание текста */
+  align-items: center; /* Центрирование по горизонтали */
+  justify-content: center; /* Центрирование по вертикали */
+  top: 70%; /* Центрирование по вертикали */
+  width: 100%; /* Занимаем всю ширину */
+  text-align: center; /* Центрирование текста */
+}
+
+.text2 > h1 {
+  font-size: min(5.34759vw, 2.46305vh); /* Адаптивный размер заголовка */
+  font-family: "Exo2";
+  margin: 1vw; /* Убираем отступы */
+}
+
+.text3 {
+  position: absolute;
+  color: white;
+  font-family: "Afacad";
+  display: flex;
+  flex-direction: column; /* Вертикальное выравнивание текста */
+  align-items: center; /* Центрирование по горизонтали */
+  justify-content: center; /* Центрирование по вертикали */
+  top: 70%; /* Центрирование по вертикали */
+  width: 100%; /* Занимаем всю ширину */
+  text-align: center; /* Центрирование текста */
+}
+
+.text3 > h1 {
+  font-family: "Exo2";
+  font-size: min(5.34759vw, 2.46305vh); /* Адаптивный размер заголовка */
+  margin: 1vw; /* Убираем отступы */
+}
+
+.text4 {
+  position: absolute;
+  color: white;
+  font-family: "Afacad";
+  display: flex;
+  flex-direction: column; /* Вертикальное выравнивание текста */
+  align-items: self-start; /* Центрирование по горизонтали */
+  justify-content: center; /* Центрирование по вертикали */
+  top: 51%; /* Центрирование по вертикали */
+  margin-left: 10%;
+  width: 100%; /* Занимаем всю ширину */
+  text-align: center; /* Центрирование текста */
+}
+
+.blockText4 {
+  display: flex;
+  flex-direction: column; /* Вертикальное выравнивание текста */
+  align-items: self-start; /* Центрирование по горизонтали */
+  margin-top: 4vw;
+}
+
+.text4 > h1 {
+  font-family: "Exo2";
+  margin-top: 4vw;
+  font-size: min(5.34759vw, 2.46305vh); /* Адаптивный размер заголовка */
+}
+
+.blockText4 > h1 {
+  font-family: "Exo2";
+  font-size: min(5.34759vw, 2.46305vh); /* Адаптивный размер заголовка */
+}
+
+.blockText4 > p {
+  font-family: "Exo2";
+  font-size: min(5.34759vw, 2.46305vh);
+}
+
+.text5 {
+  width: 100%;
+  position: absolute;
+  color: white;
+  top: 63%;
+  transform: translatex(10%); /* Центрирование по вертикали */
+  align-items: flex-start;
+  display: flex;
+  flex-direction: column;
+}
+.text5 > p {
+  font-family: "Exo2";
+  margin-top: 4vw;
+  font-size: min(5.34759vw, 2.46305vh);
+}
+
+.text6 {
+  width: 100%;
+  position: absolute;
+  color: white;
+  top: 60%;
+  transform: translatex(5%); /* Центрирование по вертикали */
+  align-items: flex-start;
+  display: flex;
+  flex-direction: column;
+  font-family: "Afacad";
+  justify-content: center;
+  line-height: 24px;
+}
+.text6 > h1 {
+  font-family: "Exo2";
+  display: flex;
+  margin-top: 3vw;
+  font-size: min(5.34759vw, 2.46305vh);
+}
+
+.text7 {
+  width: 100%;
+  position: absolute;
+  color: white;
+  top: 62%;
+  align-items: center;
+  display: flex;
+  flex-direction: column;
+  font-family: "Afacad";
+  justify-content: center;
+  line-height: 24px;
+}
+.text7 > h1 {
+  font-family: "Exo2";
+  display: flex;
+  margin-top: 3vw;
+  font-size: min(5.34759vw, 2.46305vh);
+}
+
+.text8 {
+  width: 100%;
+  position: absolute;
+  color: white;
+  top: 68%;
+  align-items: center;
+  display: flex;
+  flex-direction: column;
+  font-family: "Afacad";
+  justify-content: center;
+  line-height: 24px;
+}
+.text8 > h1 {
+  font-family: "Exo2";
+  display: flex;
+  margin-top: 2vw;
+  font-size: min(5.34759vw, 2.46305vh);
+}
+
 /* Медиа-запросы для мобильных устройств */
 @media (max-width: 425px) {
   .exit-button {
@@ -159,21 +326,55 @@ body {
   max-height: 100%;
 }
 
-/* Медиа-запросы для мобильных устройств */
-@media (max-width: 426px) {
-  .item svg {
-    max-height: 80vh; /* Ограничиваем высоту для маленьких экранов */
+/* Медиа-запросы для адаптации кнопок */
+@media (max-width: 768px) {
+  .enter-button,
+  .exit-button {
+    width: 80vw; /* Увеличиваем ширину кнопок на планшетах */
+    height: 8vh; /* Уменьшаем высоту кнопок */
   }
 }
 
-@media (max-width: 375px) {
-  .item svg {
-    max-height: 70vh; /* Еще меньше для очень маленьких экранов */
+@media (max-width: 425px) {
+  .enter-button,
+  .exit-button {
+    width: 90vw; /* Увеличиваем ширину кнопок на мобильных устройствах */
+    height: 7vh; /* Уменьшаем высоту кнопок */
   }
 }
 
-@media (max-width: 319px) {
-  .item svg {
-    max-height: 60vh; /* Минимальная высота для самых маленьких экранов */
+/* Стили для текста */
+h1 {
+  font-size: min(10vw, 5vh); /* Адаптивный размер заголовка */
+}
+
+p {
+  font-size: min(5vw, 3vh); /* Адаптивный размер текста */
+}
+
+/* Медиа-запросы для текста */
+@media (max-width: 768px) {
+  .text > h1 {
+    font-size: min(8vw, 4vh); /* Уменьшаем размер заголовка на планшетах */
+  }
+
+  .text > p {
+    font-size: min(4vw, 2.5vh); /* Уменьшаем размер текста на планшетах */
+  }
+}
+
+@media (max-width: 425px) {
+  .text > h1 {
+    font-size: min(
+      6vw,
+      3vh
+    ); /* Уменьшаем размер заголовка на мобильных устройствах */
+  }
+
+  .text > p {
+    font-size: min(
+      3vw,
+      2vh
+    ); /* Уменьшаем размер текста на мобильных устройствах */
   }
 }
